@@ -4,10 +4,11 @@
 class Complex
 {
 public:
-    Complex(float mreal=0, float mimaginary=0) : real(mreal), imaginary(mimaginary)
-    {} 
+    Complex(float mreal = 0, float mimaginary = 0) : real(mreal), imaginary(mimaginary)
+    {
+    }
 
-    Complex operator + (const Complex &obj)
+    Complex operator+(const Complex &obj)
     {
         Complex temp;
 
@@ -17,33 +18,38 @@ public:
         return temp;
     }
 
-    friend std::ostream& operator <<(std::ostream& output, Complex const& complex);
+    friend std::ostream &operator<<(std::ostream &output, Complex const &complex);
 
-    void setReal(float rl){
+    void setReal(float rl)
+    {
         this->real = rl;
     }
 
-    float getReal(){
+    float getReal()
+    {
         return this->real;
     }
-    void setImg(float img){
+    void setImg(float img)
+    {
         this->imaginary = img;
     }
 
-    float getImg(){
+    float getImg()
+    {
         return this->imaginary;
     }
+
 private:
     float real;
     float imaginary;
 };
 
-std::ostream& operator <<(std::ostream& output, Complex const& complex){
+std::ostream &operator<<(std::ostream &output, Complex const &complex)
+{
     output << complex.real << " + i" << complex.imaginary;
 
     return output;
 }
-
 
 int main()
 {
