@@ -22,7 +22,7 @@ int main()
     std::cout << R1->area() << std::endl; 
 
     std::unique_ptr<Rectangl> p2(std::move(R1));
-    std::cout << p2->area() << std::endl; 
+    std::cout << p2->area() << std::endl;
 
     return 0;
 }

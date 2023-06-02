@@ -5,19 +5,19 @@ int getValue()
 {
     return 10;
 }
-int& getValueRef()
+int &getValueRef()
 {
     static int value = 5;
 
     return value;
 }
 
-void printName(std::string & name)
+void printName(std::string &name)
 {
     std::cout << "left value refrance : " << name << std::endl;
 }
 
-void printName(std::string && name)
+void printName(std::string &&name)
 {
     std::cout << "right value referance : " << name << std::endl;
 }
@@ -37,6 +37,6 @@ int main()
 
     printName(fullNAme);
     printName(firstName + lastName);
-    
-    return 0;  
+
+    return 0;
 }
