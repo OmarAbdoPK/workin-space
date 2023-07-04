@@ -23,9 +23,9 @@ element : frequancy
 #include <vector>
 #include <algorithm>
 
-void printFreq(std::vector<int>& arr)
+void printFreq(std::vector<std::string>& arr)
 {
-    std::map<int, int> freq_map;
+    std::map<std::string, int> freq_map;
 
     std::cout << "\tElement : Frequancy" << std::endl;
 
@@ -41,7 +41,7 @@ void printFreq(std::vector<int>& arr)
 
 int main()
 {
-    std::vector<int> arr{1, 2, 3, 2, 1, 6, 8, 9, 8, 6, 4};
+    std::vector<std::string> arr{"omar", "mazen", "omar", "tarek", "mum", "omar", "alaa", "mazen"};
 
     printFreq(arr);
     return 0;
