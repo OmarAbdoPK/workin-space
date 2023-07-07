@@ -1,53 +1,20 @@
 #include <iostream>
-#include <vector>
-#include <array>
-
-void swap(int *num1, int *num2)
-{
-    int temp = *num1;
-    *num1 = *num2;
-    *num2 = temp;
-}
-
-void bubbleSort(int arr[], int size)
-{
-    bool flag = true;
-    int count = 0;
-    for(int i = 0; i < size-1; i++)
-    {
-        for(int j = 0; j < size-i-1; j++)
-        {
-            if(arr[j] < arr[j + 1])
-            {
-                swap(&arr[j], &arr[j + 1]);
-                flag = false;
-            }
-            count++;
-        }
-        if(flag == true)
-        {
-            break;
-        }
-    }
-
-    std::cout << count << " \n";
-}
-
-void printArray(int arr[], int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        std::cout << arr[i] << " ";
-    }
-}
-
+#include <string>
+#include <bits/stdc++.h>
 int main()
 {
-    int arr[] = {1, 5, 2, -5, 20, -3, 40};
-    int sizeArr = sizeof(arr) / sizeof(arr[0]);
+    int num1;
+    long long num2;
+    char ch;
+    float fl;
+    double doub;
 
-    std::array<int, 7> array = {1, 5, 2, -5, 20, -3, 40};
+    std::cin >> num1;
+    std::cin >> num2;
+    std::cin >> ch;
+    std::cin >> fl;
+    std::cin >> doub;
+    std::cout << num1 << "\n" << num2 << "\n" << ch << "\n" << fl << "\n" << doub << std::endl;
 
-    bubbleSort(arr, sizeArr);
-    printArray(arr, sizeArr);
+    return 0;
 }
