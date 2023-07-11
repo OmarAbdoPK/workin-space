@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.26.0-rc1)
+project(HELLOAPP)
+add_executable(hellobinary main.cpp)
+
+target_include_directories(hellobinary PUBLIC include/)
+
