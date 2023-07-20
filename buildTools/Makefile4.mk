@@ -1,17 +1,18 @@
 CC = gcc
 C  = g++
-OBJS = testDate.o Date.o
+OBJS = TestDate.o Date.o
 SRC = $(OBJS, .o = .c)
 
-testDate: $(OBJS)
+TestDate: $(OBJS)
 	$(C) -o $@  $(OBJS)
 
 
+#pattern rule that compiles every .c into .o
 %.o : %.c
-	$(C) -c  $(OBJS)
+	$(CC) -c $(SRC)
 
 
-
+#Excute even if not updated = Excute if no change
 .PHONY: cleanall cleanobj
 
 cleanall: cleanobj

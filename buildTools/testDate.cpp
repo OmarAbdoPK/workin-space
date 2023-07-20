@@ -1,9 +1,10 @@
 #include <iostream>
+#include "Date.h"
 
 
 int main()
 {
-    std::cout << "Hello in Makefile and CMakefiles" << std::endl;
+    Date date;
 
     return 0;
 }
