@@ -26,7 +26,7 @@ void merge(int arr[], int const left, int const mid, int const right)
 
     while (indexSubArrayOne < subArrayOne && indexSubArrayTwo < subArrayTwo)
     {
-        if(leftArray[indexSubArrayOne] <= rightArray[indexSubArrayTwo]){
+        if(leftArray[indexSubArrayOne] >= rightArray[indexSubArrayTwo]){
             arr[indexMergeArray] = leftArray[indexSubArrayOne];
             indexSubArrayOne++;
         }
